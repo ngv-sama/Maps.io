@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/fade.css">
+    </head>
+    <body>
+        <div id="slideshow">
+            <img src="../assets/dragonspine.jpg" class="active" alt="image 1">
+            <img src="../assets/inazuma.jpg" alt="image 2">
+            <img src="../assets/sumeru.jpg" alt="image 3">
+        </div>
+        
+        
+        <div class="nav">
+        <span id="user">Welcome < email-id > </span>
+        
+        <h1 id="title"> LOUVRE </h1>
+        <button id="logout" onclick="logout()">Logout</button>
+        </div>
+
+        
+        
+        <div class="wrapper">
+            <a href="#"><span onclick="map()">Click for Map!</span></a>
+        </div>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+          <script src="../js/firebase.js" async defer></script>
+          <script src="../js/welcome.js" async defer></script>
+    </body>
+</html>

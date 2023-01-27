@@ -1,0 +1,141 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+    color: white;
+ }
+
+
+  .box{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+  }
+  
+  .text-center
+  {
+    width: 645px;
+    margin: 0 auto;
+  }
+
+  .text-center h1 {
+    position: relative;
+  }
+  
+  .text-center h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .15em;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);
+  }
+  
+  
+  
+  
+  .text-center h1
+  {
+    width: 645px;
+    color: black;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    text-align: center;
+
+    font-size: 40px;
+    
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+    /* animation-iteration-count: 20;  */
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+ 
+.text-center{
+	color: black;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+}
+.box{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+    background-color: white(0, 0, 0, 0.89);
+	border-radius:3px;
+	padding:70px 100px;
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color: black;	
+    pointer-event:none;
+	transition: all 0.5s ease-in-out;
+    font-family: monospace;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color: black;
+  
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #833ab4;	
+}
+.btn{
+	color:#fff;
+	background-image: linear-gradient(to right , #833ab4, #fd1d1d, #fcb045);
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+    font-family: monospace;
+    margin-left: 220px;
+    width: 200px;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+.nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* set a fixed height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    
+    
+}
+
+#user {
+    position: fixed;
+    left: 0;
+}
+
+#title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#logout {
+    position: fixed;
+    right: 0;
+}
+
+/* Media query to change the layout on smaller screens */
+#logout {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+}
+
+#logout:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 820px) {
+    .nav {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    #title {
+      width: auto;
+    }
+  }
+
+
+.svg
+{
+    padding: 200px;
+    /* position: fixed; */
+}
+.line
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    position: fixed;
+    left:0;
+    width: 100%;
+    height: 2px;
+    margin-top: 50px;
+}
+
+#home {
+    position: fixed;
+    right: 0;
+}
+
+/* Media query to change the layout on smaller screens */
+#home {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+    margin-right: 100px;
+}
+
+#home:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.info
+{
+    font-family: 'Montserrat', sans-serif;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* set a fixed height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+
+.a {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+}
+
+.a:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

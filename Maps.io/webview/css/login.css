@@ -1,0 +1,265 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    border-bottom: none;
+    color: black;
+ }
+ 
+  
+  /* body{
+    /* transition: background-image 5s ease-out; */
+    /* background-image: url("../assets/sumeru.jpg"); */
+  /* } */
+
+  body{
+    height: 83.7vh;
+
+    background-image: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    background-repeat: none;
+    background-size: cover;
+    
+  }
+
+  #item-1 {
+    background-image: url("dragonspine.jpg");
+  }
+  
+  #item-2 {
+    background-image: url("inazuma.jpg");
+  }
+  
+  #item-3 {
+    background-image: url("liyue.jpg");
+  }
+
+  #item-4
+  {
+    background-image: url("venti.jpg");
+  }
+
+  #item-5
+  {
+    background-image: url("sumeru.jpg");
+  }
+  
+  
+  .page
+  {
+    width: 700px;
+    height: 500px;
+    padding: 50px 5px 24px;
+    margin-left: 80px;
+    margin-right: 150px;
+    margin-top: 120px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    border-radius: 12px;
+    font-family: monospace;
+    transform: scale(0.8);
+    margin-inline: auto;
+    
+    
+}
+  
+  .typewriter
+  {
+    width: 510px;
+    margin: 0 auto;
+  }
+
+  .typewriter h1 {
+    position: relative;
+  }
+  
+  .typewriter h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .15em;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);
+  }
+  
+  
+  
+  
+  .typewriter h1
+  {
+    width: 510px;
+    color: black;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    text-align: center;
+
+    font-size: 40px;
+    
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+    /* animation-iteration-count: 20;  */
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  
+  
+  h1 {
+    font-size: 23px;
+  }
+  
+  .form {
+    width: 300px;
+    padding: 30px 15px 24px;
+    margin: 0 auto;
+  }
+  .form .control {
+    margin: 0 0 24px;
+  }
+  .form .control input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 0;
+    background: transparent;
+    color: black;
+    font-family: monospace, serif;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+  }
+  .form .control input:hover, .form .control input:focus {
+    outline: none;
+    border: 0;
+  }
+  .form .btn {
+    width: 100%;
+    display: block;
+    padding: 14px 16px;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: black;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px;
+  }
+  
+  .block-cube {
+    position: relative;
+  }
+  .block-cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: white;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+  }
+  .block-cube .bg-top .bg-inner {
+    bottom: 0;
+  }
+  .block-cube .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    /* background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); */
+  }
+  .block-cube .bg-right {
+    position: absolute;
+    background: #fd1d1d;
+    background: #fcb045;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+  }
+  .block-cube .bg-right .bg-inner {
+    left: 0;
+  }
+  .block-cube .bg .bg-inner {
+    transition: all 0.2s ease-in-out;
+  }
+  .block-cube .bg-inner {
+    background: white;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+  .block-cube .text {
+    position: relative;
+    z-index: 2;
+  }
+  .block-cube.block-input input {
+    position: relative;
+    z-index: 2;
+  }
+  .block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+    top: 100%;
+    background: black;
+  }
+  .block-cube.block-input .bg-top,
+  .block-cube.block-input .bg {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    transition: background 0.2s ease-in-out;
+  }
+
+  .block-cube.block-input .bg-right
+  {
+    background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+    transition: background 0.2s ease-in-out;
+  }
+
+  .block-cube.block-input .bg-right .bg-inner,
+  .block-cube.block-input .bg-top .bg-inner {
+    transition: all 0.2s ease-in-out;
+  }
+  .block-cube.block-input:focus .bg-top,
+  .block-cube.block-input:focus .bg-right,
+  .block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
+  .block-cube.block-input:hover .bg-right,
+  .block-cube.block-input:hover .bg {
+    background: black(255, 255, 255, 0.8);
+  }
+  .block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%;
+  }
+
+  .register
+  {
+    margin-top: 20px;
+    
+  }
+
+  .text
+  {
+    cursor: pointer;
+  }
+  
+  
